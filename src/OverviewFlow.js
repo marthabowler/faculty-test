@@ -22,8 +22,9 @@ const OverviewFlow = () => {
 
   return (
     <div className="container">
+      <p>Mamma</p>
       <input></input>
-      <button>Add a chatacteristic!</button>
+      <button>Add a characteristic!</button>
       <ReactFlow
         elements={elements}
         nodesDraggable={false}

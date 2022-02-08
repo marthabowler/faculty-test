@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "@mui/material/Slider";
 
-export default [
+const initialElements = [
   {
     id: "1",
     data: {
@@ -108,3 +108,5 @@ export default [
     labelStyle: { fill: "#f6ab6c", fontWeight: 700 },
   },
 ];
+
+export default initialElements;

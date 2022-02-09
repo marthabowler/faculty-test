@@ -71,6 +71,12 @@ Options state:
 
 Winner: can just be figured out by selecting the object with the highest score (doesnt need a state)
 
+DECISION on states:
+ATTRIBUTES: [{id: number, attribute: string, weight: number}, {id: number, attribute: string, weight: number}...]
+OPTIONS: [{id: number, option_name: string, values: [number, number], total:number}, {id: number, option_name: string, values: [number, number], total:number}....]
+
+> using indexes for id may make it easier to extract the values and their associated ids (which will correspond to the indexes of the values)
+
 8th Feb PM:
 
 - wireframe
@@ -80,4 +86,4 @@ Winner: can just be figured out by selecting the object with the highest score (
 9th Feb AM:
 
 - create attribute element with use reducer
-- see if can whittle down into flow element: because I have managed to put a attribute element into the flowchart, I will keep going with the flowchart
+- see if can whittle down into flow element => this worked but it is best for now to use regular react as functionality > looks

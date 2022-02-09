@@ -1,5 +1,5 @@
 import "./App.css";
-import OverviewFlow from "./OverviewFlow";
+import { FlowChart } from "./FlowChart";
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <h2>Decision making time!</h2>
       </header>
-      <OverviewFlow />
+      <FlowChart />
     </div>
   );
 }

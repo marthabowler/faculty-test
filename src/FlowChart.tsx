@@ -1,6 +1,6 @@
 import ReactFlow, { Background } from "react-flow-renderer";
 
-import { Attribute } from "./Attribute";
+import { Attributes } from "./Attributes";
 
 const onLoad = (reactFlowInstance: { fitView: () => void }) => {
   console.log("flow loaded:", reactFlowInstance);
@@ -12,7 +12,7 @@ export function FlowChart() {
     {
       id: "1",
       data: {
-        label: <Attribute />,
+        label: "<Attributes />,",
       },
       position: { x: 250, y: 20 },
     },

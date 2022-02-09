@@ -40,3 +40,13 @@
   width: 1000px;
   height: 500px;
 }
+
+.attributes {
+  display: flex;
+  margin: 20px;
+}
+
+.attribute {
+  margin: 20px;
+  padding: 10px;
+}

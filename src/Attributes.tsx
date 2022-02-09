@@ -1,11 +1,5 @@
-import { useReducer, useState } from "react";
+import { useState } from "react";
 import Attribute from "./Attribute";
-import attributesReducer from "./utils/AttributeReducer";
-
-function newAttribute(attributeName: string, attributes: any) {
-  return { id: attributes.length, name: attributeName, weight: 0.5 };
-}
-
 interface attributeType {
   name: string;
   id: number;

@@ -50,3 +50,8 @@
   margin: 20px;
   padding: 10px;
 }
+
+.options {
+  display: flex;
+  margin: 20px;
+}

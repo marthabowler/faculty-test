@@ -1,7 +1,5 @@
 import ReactFlow, { Background } from "react-flow-renderer";
 
-import { Attributes } from "./Attributes";
-
 const onLoad = (reactFlowInstance: { fitView: () => void }) => {
   console.log("flow loaded:", reactFlowInstance);
   reactFlowInstance.fitView();

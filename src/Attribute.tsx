@@ -1,6 +1,9 @@
+import attributeType from "./types/attributeType";
+import { Action } from "./utils/reducer";
+
 interface AttributeProps {
-  attribute: any;
-  dispatch: any;
+  attribute: attributeType;
+  dispatch: React.Dispatch<Action>;
 }
 export default function Attribute(props: AttributeProps): JSX.Element {
   return (
@@ -17,7 +20,7 @@ export default function Attribute(props: AttributeProps): JSX.Element {
           onChange={(e) => {
             e.preventDefault();
             props.dispatch({
-              type: "change-number",
+              type: "change-number-attribute",
               payload: {
                 weight: parseFloat(e.target.value),
                 id: props.attribute.id,

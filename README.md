@@ -87,3 +87,17 @@ OPTIONS: [{id: number, option_name: string, values: [number, number], total:numb
 
 - create attribute element with use reducer
 - see if can whittle down into flow element => this worked but it is best for now to use regular react as functionality > looks
+- create the attributes component
+
+9th Feb PM:
+
+- create one option element with useReducer and see if it can access the attribute values
+- DECIDED to use one state for the useReduce as this was the purpose of the challenge
+- Managed to get the options and the attributes working and decided the best way to pick the winner would be through a function
+- basic functionality is achieved
+
+Decisions:
+
+- SPEND TIME FINDING OUT THE TYPE FOR THE STATE and ACTION in the reducer function as it is important
+
+- no work on thursday as got interview but on Friday play around with React Flow + TEST

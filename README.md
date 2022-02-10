@@ -87,3 +87,17 @@ OPTIONS: [{id: number, option_name: string, values: [number, number], total:numb
 
 - create attribute element with use reducer
 - see if can whittle down into flow element => this worked but it is best for now to use regular react as functionality > looks
+- create the attributes component
+
+9th Feb PM:
+
+- create one option element with useReducer and see if it can access the attribute values
+- DECIDED to use one state for the useReduce as this was the purpose of the challenge
+- Managed to get the options and the attributes working and decided the best way to pick the winner would be through a function
+- basic functionality is achieved
+
+Decisions:
+
+- no work on thursday as got interview but on Friday play around with React Flow
+
+BUGS: cannot find the right types for state and dispatch so used "any", because I'm restricting the types further down in the functions I don't see this as a priority also I watc

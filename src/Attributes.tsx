@@ -1,22 +1,21 @@
 import { useState } from "react";
 import Attribute from "./Attribute";
-interface attributeType {
-  name: string;
-  id: number;
-  weight: number;
-}
+import attributeType from "./types/attributeType";
 
 interface AttributesProps {
-  attributes: any;
+  state: any;
   dispatch: any;
 }
 
 export function Attributes(props: AttributesProps): JSX.Element {
   const [attributeName, setAttrbuteName] = useState("");
 
-  function handleSubmit(e: any) {
+  function handleSubmit(e: { preventDefault: () => void }) {
     e.preventDefault();
-    props.dispatch({ type: "add-attribute", payload: { name: attributeName } });
+    props.dispatch({
+      type: "add-attribute",
+      payload: { name: attributeName },
+    });
     setAttrbuteName("");
   }
 
@@ -31,7 +30,7 @@ export function Attributes(props: AttributesProps): JSX.Element {
         ></input>
       </form>
       <div className="attributes">
-        {props.attributes.map((attribute: attributeType) => (
+        {props.state.attributes.map((attribute: attributeType) => (
           <div key={attribute.id}>
             <Attribute attribute={attribute} dispatch={props.dispatch} />
           </div>

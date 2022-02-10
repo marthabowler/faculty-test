@@ -1,19 +1,23 @@
 import { useReducer } from "react";
 import "./App.css";
 import { Attributes } from "./Attributes";
-import attributesReducer from "./utils/AttributeReducer";
-// import { FlowChart } from "./FlowChart";
+import { Options } from "./Options";
+import reducer from "./utils/reducer";
+import Winner from "./Winner";
 
 function App() {
-  const [attributes, dispatch] = useReducer(attributesReducer, []);
-
+  const [state, dispatch] = useReducer(reducer, {
+    attributes: [],
+    options: [],
+  });
   return (
     <div className="App">
       <header className="App-header">
         <h2>Decision making time!</h2>
       </header>
-      {/* <FlowChart /> */}
-      <Attributes attributes={attributes} dispatch={dispatch} />
+      <Attributes state={state} dispatch={dispatch} />
+      <Options state={state} dispatch={dispatch} />
+      <Winner state={state} />
     </div>
   );
 }

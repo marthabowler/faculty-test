@@ -1,5 +1,7 @@
+import attributeType from "./types/attributeType";
+
 interface AttributeProps {
-  attribute: any;
+  attribute: attributeType;
   dispatch: any;
 }
 export default function Attribute(props: AttributeProps): JSX.Element {
@@ -17,7 +19,7 @@ export default function Attribute(props: AttributeProps): JSX.Element {
           onChange={(e) => {
             e.preventDefault();
             props.dispatch({
-              type: "change-number",
+              type: "change-number-attribute",
               payload: {
                 weight: parseFloat(e.target.value),
                 id: props.attribute.id,

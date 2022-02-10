@@ -98,6 +98,6 @@ OPTIONS: [{id: number, option_name: string, values: [number, number], total:numb
 
 Decisions:
 
-- no work on thursday as got interview but on Friday play around with React Flow
+- SPEND TIME FINDING OUT THE TYPE FOR THE STATE and ACTION in the reducer function as it is important
 
-BUGS: cannot find the right types for state and dispatch so used "any", because I'm restricting the types further down in the functions I don't see this as a priority also I watc
+- no work on thursday as got interview but on Friday play around with React Flow + TEST

@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Attribute from "./Attribute";
 import attributeType from "./types/attributeType";
+import { stateType } from "./types/stateType";
+import { Action } from "./utils/reducer";
 
 interface AttributesProps {
-  state: any;
-  dispatch: any;
+  state: stateType;
+  dispatch: React.Dispatch<Action>;
 }
 
 export function Attributes(props: AttributesProps): JSX.Element {
@@ -14,7 +16,7 @@ export function Attributes(props: AttributesProps): JSX.Element {
     e.preventDefault();
     props.dispatch({
       type: "add-attribute",
-      payload: { name: attributeName },
+      payload: { name: attributeName, weight: 0 },
     });
     setAttrbuteName("");
   }

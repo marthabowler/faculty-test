@@ -10,6 +10,9 @@ function App() {
     attributes: [],
     options: [],
   });
+
+  console.log(state);
+
   return (
     <div className="App">
       <header className="App-header">

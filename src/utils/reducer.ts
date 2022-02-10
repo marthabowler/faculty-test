@@ -1,8 +1,20 @@
 import attributeType from "../types/attributeType";
 import optionValueType from "../types/optionValueType";
 import optionType from "../types/optionType";
+import { stateType } from "../types/stateType";
 
-export default function reducer(state: any, action: any) {
+export interface Action {
+  type: string;
+  payload: {
+    id?: number;
+    weight: number;
+    optionid?: number;
+    attributeid?: number;
+    name?: string;
+  };
+}
+
+export default function reducer(state: stateType, action: Action): stateType {
   switch (action.type) {
     case "change-number-attribute": {
       return {
@@ -35,46 +47,54 @@ export default function reducer(state: any, action: any) {
       };
     }
     case "add-attribute": {
-      return {
-        attributes: [
-          ...state.attributes,
-          newAttribute(action.payload.name, state),
-        ],
-        options: [...state.options],
-      };
+      if (action.payload.name) {
+        return {
+          attributes: [
+            ...state.attributes,
+            newAttribute(action.payload.name, state),
+          ],
+          options: [...state.options],
+        };
+      }
+      return state;
     }
     case "add-option": {
-      return {
-        attributes: [...state.attributes],
-        options: [...state.options, newOption(action.payload.name, state)],
-      };
+      if (action.payload.name) {
+        return {
+          attributes: [...state.attributes],
+          options: [...state.options, newOption(action.payload.name, state)],
+        };
+      }
+      return state;
     }
+    default:
+      return state;
   }
-}
 
-function newAttribute(
-  attributeName: string,
-  state: { attributes: attributeType[]; options: optionType[] }
-) {
-  return {
-    id: state.attributes.length,
-    name: attributeName,
-    weight: 0.5,
-  };
-}
+  function newAttribute(
+    attributeName: string,
+    state: { attributes: attributeType[]; options: optionType[] }
+  ) {
+    return {
+      id: state.attributes.length,
+      name: attributeName,
+      weight: 0.5,
+    };
+  }
 
-function newOption(
-  optionName: string,
-  state: { attributes: attributeType[]; options: optionType[] }
-) {
-  let valueArray: optionValueType[] = [];
-  state.attributes.forEach((attribute: attributeType) =>
-    valueArray.push({ id: attribute.id, score: 50 })
-  );
+  function newOption(
+    optionName: string,
+    state: { attributes: attributeType[]; options: optionType[] }
+  ) {
+    let valueArray: optionValueType[] = [];
+    state.attributes.forEach((attribute: attributeType) =>
+      valueArray.push({ id: attribute.id, score: 50 })
+    );
 
-  return {
-    id: state.options.length,
-    name: optionName,
-    values: valueArray,
-  };
+    return {
+      id: state.options.length,
+      name: optionName,
+      values: valueArray,
+    };
+  }
 }

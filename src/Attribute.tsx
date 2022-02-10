@@ -1,8 +1,9 @@
 import attributeType from "./types/attributeType";
+import { Action } from "./utils/reducer";
 
 interface AttributeProps {
   attribute: attributeType;
-  dispatch: any;
+  dispatch: React.Dispatch<Action>;
 }
 export default function Attribute(props: AttributeProps): JSX.Element {
   return (

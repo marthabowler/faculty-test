@@ -38,6 +38,7 @@ export function FlowChart(props: FlowChartProps) {
   return (
     <div className="container">
       <ReactFlow
+        data-testid="flow-chart"
         elements={loadWinner(
           loadOptions(
             loadAttributes(props.state.attributes, props.dispatch, 600),

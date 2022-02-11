@@ -24,7 +24,9 @@ export function Attributes(props: AttributesProps): JSX.Element {
       <p>Add an attribute</p>
       <form onSubmit={handleSubmit}>
         <input
+          data-testid="attribute-submit"
           type="text"
+          placeholder="Attribute name"
           value={attributeName}
           onChange={(e) => setAttrbuteName(e.target.value)}
         ></input>

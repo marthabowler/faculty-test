@@ -1,20 +1,14 @@
-import {
-  render,
-  fireEvent,
-  screen,
-  getAllByText,
-} from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 import App from "./App";
-global.ResizeObserver = require("resize-observer-polyfill");
 import userEvent from "@testing-library/user-event";
+global.ResizeObserver = require("resize-observer-polyfill");
 
 describe("<App />", () => {
-  const { getByPlaceholderText, getByText, getAllByText } = render(<App />);
-  it("shows the choice input ", () => {
+  it("shows the choice input", () => {
     const inputAttributeEl = screen.getByTestId("attribute-submit");
     expect(inputAttributeEl).toHaveAttribute("type", "text");
     userEvent.type(inputAttributeEl, "taste");
-    fireEvent.submit(getByPlaceholderText("Attribute name"));
+    fireEvent.submit(screen.getByPlaceholderText("Attribute name"));
     const inputOptionEl = screen.getByTestId("option-input");
     expect(inputOptionEl).toBeInTheDocument();
   });
@@ -23,13 +17,13 @@ describe("<App />", () => {
     render(<App />);
     const inputAttributeEl = screen.getByTestId("attribute-submit");
     userEvent.type(inputAttributeEl, "taste");
-    fireEvent.submit(getByPlaceholderText("Attribute name"));
+    fireEvent.submit(screen.getByPlaceholderText("Attribute name"));
     const inputOptionEl = screen.getByTestId("option-input");
     expect(inputOptionEl).toBeInTheDocument();
     expect(inputOptionEl).toHaveAttribute("type", "text");
     userEvent.type(inputOptionEl, "chicken");
-    fireEvent.submit(getByPlaceholderText("Option name"));
-    expect(getAllByText(/chicken/)).toHaveLength(2);
-    expect(getAllByText(/taste/i)).toHaveLength(2);
+    fireEvent.submit(screen.getByPlaceholderText("Option name"));
+    expect(screen.getAllByText(/chicken/)).toHaveLength(2);
+    expect(screen.getAllByText(/taste/i)).toHaveLength(2);
   });
 });

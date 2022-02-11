@@ -5,6 +5,7 @@ global.ResizeObserver = require("resize-observer-polyfill");
 
 describe("<App />", () => {
   it("shows the choice input", () => {
+    render(<App />);
     const inputAttributeEl = screen.getByTestId("attribute-submit");
     expect(inputAttributeEl).toHaveAttribute("type", "text");
     userEvent.type(inputAttributeEl, "taste");

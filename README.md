@@ -103,6 +103,9 @@ decisions:
 - Worry about the connections between them later
 - Managed to plot them onto the react flow data
 - managed to get the links between them
+- Added some testing to see the functionality of the options and the attributes input
+- I want to add some testing for adding to the react flow data array but I don't know much about function mocking
+- Maybe a Saturday job but not ultimate
 
 Decisions:
 

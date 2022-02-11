@@ -24,6 +24,8 @@ export function Options(props: OptionProps): JSX.Element {
           <p>Add a choice!</p>
           <form onSubmit={handleSubmitOption}>
             <input
+              data-testid="option-input"
+              placeholder="Option name"
               type="text"
               value={optionName}
               onChange={(e) => setOptionName(e.target.value)}

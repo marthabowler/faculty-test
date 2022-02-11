@@ -1,8 +1,8 @@
 import { useReducer } from "react";
 import "./App.css";
-import { Attributes } from "./Attributes";
-import { FlowChart } from "./FlowChart";
-import { Options } from "./Options";
+import { Attributes } from "./Components/Attributes";
+import { FlowChart } from "./Components/FlowChart";
+import { Options } from "./Components/Options";
 import reducer from "./utils/reducer";
 
 function App() {

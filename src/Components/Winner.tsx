@@ -1,4 +1,4 @@
-import findWinner from "./utils/findWinner";
+import findWinner from "../utils/findWinner";
 
 interface WinnerProps {
   state: any;

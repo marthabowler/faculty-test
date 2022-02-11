@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Option from "./Option";
-import optionType from "./types/optionType";
 
 interface OptionProps {
   state: any;
@@ -31,7 +29,7 @@ export function Options(props: OptionProps): JSX.Element {
               onChange={(e) => setOptionName(e.target.value)}
             ></input>
           </form>
-          <div className="options">
+          {/* <div className="options">
             {props.state.options.map((option: optionType) => (
               <div key={option.id}>
                 <Option
@@ -41,7 +39,7 @@ export function Options(props: OptionProps): JSX.Element {
                 />
               </div>
             ))}
-          </div>
+          </div> */}
         </>
       )}
     </div>

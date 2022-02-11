@@ -1,9 +1,9 @@
 import { useReducer } from "react";
 import "./App.css";
 import { Attributes } from "./Attributes";
+import { FlowChart } from "./FlowChart";
 import { Options } from "./Options";
 import reducer from "./utils/reducer";
-import Winner from "./Winner";
 
 function App() {
   const [state, dispatch] = useReducer(reducer, {
@@ -20,7 +20,8 @@ function App() {
       </header>
       <Attributes state={state} dispatch={dispatch} />
       <Options state={state} dispatch={dispatch} />
-      <Winner state={state} />
+      {/* <Winner state={state} /> */}
+      <FlowChart state={state} dispatch={dispatch} />
     </div>
   );
 }

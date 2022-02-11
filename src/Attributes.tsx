@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Attribute from "./Attribute";
-import attributeType from "./types/attributeType";
 import { stateType } from "./types/stateType";
 import { Action } from "./utils/reducer";
 
@@ -31,13 +29,13 @@ export function Attributes(props: AttributesProps): JSX.Element {
           onChange={(e) => setAttrbuteName(e.target.value)}
         ></input>
       </form>
-      <div className="attributes">
+      {/* <div className="attributes">
         {props.state.attributes.map((attribute: attributeType) => (
           <div key={attribute.id}>
             <Attribute attribute={attribute} dispatch={props.dispatch} />
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

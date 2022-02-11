@@ -74,7 +74,7 @@ export default function reducer(state: stateType, action: Action): stateType {
   function newAttribute(
     attributeName: string,
     state: { attributes: attributeType[]; options: optionType[] }
-  ) {
+  ): attributeType {
     return {
       id: state.attributes.length,
       name: attributeName,
@@ -85,7 +85,7 @@ export default function reducer(state: stateType, action: Action): stateType {
   function newOption(
     optionName: string,
     state: { attributes: attributeType[]; options: optionType[] }
-  ) {
+  ): optionType {
     let valueArray: optionValueType[] = [];
     state.attributes.forEach((attribute: attributeType) =>
       valueArray.push({ id: attribute.id, score: 50 })

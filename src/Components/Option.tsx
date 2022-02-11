@@ -1,8 +1,8 @@
-import attributeType from "./types/attributeType";
-import optionType from "./types/optionType";
-import optionValueType from "./types/optionValueType";
-import { stateType } from "./types/stateType";
-import { Action } from "./utils/reducer";
+import attributeType from "../types/attributeType";
+import optionType from "../types/optionType";
+import optionValueType from "../types/optionValueType";
+import { stateType } from "../types/stateType";
+import { Action } from "../utils/reducer";
 
 interface OptionProps {
   option: optionType;

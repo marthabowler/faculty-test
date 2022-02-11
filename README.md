@@ -102,9 +102,19 @@ decisions:
 - Now basic functionality is achieved, pass the state as props in the flow chart and for each option and for each attribute add them to an array which will eventually be the flow chart data
 - Worry about the connections between them later
 - Managed to plot them onto the react flow data
+- managed to get the links between them
 
 Decisions:
 
 - SPEND TIME FINDING OUT THE TYPE FOR THE STATE and ACTION in the reducer function as it is important
-
 - no work on thursday as got interview but on Friday play around with React Flow + TEST
+- TESTING is more important
+
+BUGS:
+
+- when add attribute the choices don't update (importance: 6)
+- when choices have the same score, they only pick one as the winner (importance: 5)
+- not a bug but testing (importance: 10)
+- maybe the UI doesn't make it obvious what the user can do (importance: 6)
+- need to think of what the type is for the React Flow data (impportance 8)
+- not centered when the number is even in either choices or attributes (importance: 2)

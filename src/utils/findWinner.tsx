@@ -5,7 +5,7 @@ import calculateScore from "./calculateScore";
 export default function findWinner(
   attributes: attributeType[],
   options: optionType[]
-) {
+): { name: string; result: number } {
   let winner: { name: string; result: number } = { name: "", result: 0 };
   for (let option of options) {
     if (calculateScore(attributes, option) > winner.result) {

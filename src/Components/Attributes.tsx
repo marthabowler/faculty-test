@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { stateType } from "./types/stateType";
-import { Action } from "./utils/reducer";
+import { stateType } from "../types/stateType";
+import { Action } from "../utils/reducer";
 
 interface AttributesProps {
   state: stateType;

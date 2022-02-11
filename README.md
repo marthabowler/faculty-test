@@ -96,6 +96,13 @@ OPTIONS: [{id: number, option_name: string, values: [number, number], total:numb
 - Managed to get the options and the attributes working and decided the best way to pick the winner would be through a function
 - basic functionality is achieved
 
+10th Feb AM:
+decisions:
+
+- Now basic functionality is achieved, pass the state as props in the flow chart and for each option and for each attribute add them to an array which will eventually be the flow chart data
+- Worry about the connections between them later
+- Managed to plot them onto the react flow data
+
 Decisions:
 
 - SPEND TIME FINDING OUT THE TYPE FOR THE STATE and ACTION in the reducer function as it is important

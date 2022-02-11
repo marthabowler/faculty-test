@@ -37,8 +37,8 @@
   }
 } */
 .container {
-  width: 1000px;
-  height: 500px;
+  width: 100vw;
+  height: 100vw;
 }
 
 .attributes {
@@ -47,8 +47,7 @@
 }
 
 .attribute {
-  margin: 20px;
-  padding: 10px;
+  width: 120px;
 }
 
 .options {

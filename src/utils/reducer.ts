@@ -46,18 +46,27 @@ export default function reducer(state: stateType, action: Action): stateType {
         }),
       };
     }
-    case "add-attribute": {
+    case "add-attribute":
       if (action.payload.name) {
         return {
           attributes: [
             ...state.attributes,
             newAttribute(action.payload.name, state),
           ],
-          options: [...state.options],
+          options: state.options.map((option: optionType) => {
+            return {
+              ...option,
+              values: [
+                ...option.values,
+                { id: state.attributes.length, score: 50 },
+              ],
+            };
+          }),
         };
       }
+
       return state;
-    }
+
     case "add-option": {
       if (action.payload.name) {
         return {
